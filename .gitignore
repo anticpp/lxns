@@ -1,0 +1,5 @@
+*.o
+
+pid
+network
+user

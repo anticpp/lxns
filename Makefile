@@ -1,5 +1,5 @@
 
-TARGETS=pid network mount
+TARGETS=pid network user
 
 all: $(TARGETS)
 
@@ -9,7 +9,7 @@ pidns: pid.c
 nwns: network.c
 	gcc $^ -o $@
 
-mntns: mount.c
+mntns: user.c
 	gcc $^ -o $@
 
 clean:
