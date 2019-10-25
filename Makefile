@@ -1,15 +1,15 @@
 
-TARGETS=pid network user
+TARGETS=pid network uts
 
 all: $(TARGETS)
 
-pidns: pid.c
+pid: pid.c
 	gcc $^ -o $@
 
-nwns: network.c
+network: network.c
 	gcc $^ -o $@
 
-mntns: user.c
+uts: uts.c
 	gcc $^ -o $@
 
 clean:

@@ -12,7 +12,7 @@
 static char stack[STACK_SIZE];
 
 static int child_main() {
-    printf("Network in child\n");
+    printf("Network in child:\n");
     system("ip link");
 }
 
@@ -25,6 +25,5 @@ int main(int argc, const char *argv[]) {
     assert(pid>0);
 
     assert(waitpid(pid, NULL, 0)>0);
-    printf("Child has terminated\n");
     return 0;
 }

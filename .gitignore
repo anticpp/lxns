@@ -2,4 +2,8 @@
 
 pid
 network
+*.o
+
 user
+network
+uts

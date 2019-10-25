@@ -2,14 +2,14 @@ Demonstrate Linux namespace.
 ==================================
 
 
-- mount.c
+- network.c
   + Network namespace
 
 - pid.c
   + Pid namespace
 
-- user.c
-  + User namespace
+- uts.c
+  + UTS namespace
 
 - runc
   + Simple container tool
