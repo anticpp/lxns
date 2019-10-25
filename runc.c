@@ -19,7 +19,6 @@ static int child_main(void *command) {
         printf("Child execv command '%s' error '%s'\n", (char *)command, strerror(errno));
         return 1;
     }
-    printf("Child exit\n");
 }
 
 int main(int argc, const char *argv[]) {
@@ -33,5 +32,6 @@ int main(int argc, const char *argv[]) {
                     , (void*)argv[1]);
     assert(pid>0);
     assert(waitpid(pid, NULL, 0)>0);
+    printf("Client terminated\n");
     return 0;
 }
