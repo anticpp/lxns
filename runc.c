@@ -32,6 +32,6 @@ int main(int argc, const char *argv[]) {
                     , (void*)argv[1]);
     assert(pid>0);
     assert(waitpid(pid, NULL, 0)>0);
-    printf("Client terminated\n");
+    printf("Child terminated\n");
     return 0;
 }
