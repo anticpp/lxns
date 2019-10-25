@@ -1,5 +1,5 @@
 
-TARGETS=pid network uts
+TARGETS=pid network uts runc
 
 all: $(TARGETS)
 
@@ -11,6 +11,11 @@ network: network.c
 
 uts: uts.c
 	gcc $^ -o $@
+
+runc: runc.c
+	gcc $^ -o $@
+
+
 
 clean:
 	rm -f $(TARGETS)

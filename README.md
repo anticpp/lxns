@@ -12,4 +12,4 @@ Demonstrate Linux namespace.
   + UTS namespace
 
 - runc
-  + Simple container tool
+  + Run a container
