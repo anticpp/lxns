@@ -12,9 +12,9 @@
 static char stack[STACK_SIZE];
 
 static int child_main(void *command) {
-    printf("In child, pid %d\n", getpid());
     sethostname("runc", strlen("runc"));
-    int rv = execv(command, NULL);
+    char *argv[] = {command};
+    int rv = execv(command, argv);
     if(rv<0) {
         printf("Child execv command '%s' error '%s'\n", (char *)command, strerror(errno));
         return 1;
@@ -32,6 +32,5 @@ int main(int argc, const char *argv[]) {
                     , (void*)argv[1]);
     assert(pid>0);
     assert(waitpid(pid, NULL, 0)>0);
-    printf("Child terminated\n");
     return 0;
 }
